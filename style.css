@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(assets/lenguaje-software-simulacion-scaled.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.container{
+    background-color: rgba(19, 0, 12, 0.8);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h1{
+    font-size: 2.5rem;
+    padding-bottom: 0.2em ;
+}
+h2{
+    color: rgb(180, 255, 0);
+    font-size: 1.7rem;
+}
+header{
+    width: 100%;
+    height: 10vh;
+    color: rgb(230, 230, 230);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS';
+}
+.secondary-container{
+    width: 100%;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.modal-content{
+    position: absolute;
+    width: 40vw;
+    height: 25vw;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1.5rem);
+    z-index: -1;
+}
+.btn-container{
+    padding:2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap:2rem;
+    justify-items: center;
+    align-items: center;
+}
+.caja{
+    width: 8rem;
+    height:8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.caja:hover{
+    background-color: rgba(190, 190, 190, 0.2);
+    border-radius: 1em;
+}
+.img-size{
+    width: 35%;
+    height:auto;
+}
+.box-text{
+    height: 30%;
+    padding: 0.6em 0;
+    font-family: 'Trebuchet MS';
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(200,200,200);
+}
+.box-container{
+    z-index: 1;
+    position: absolute;
+    width: 77vw;
+    height: 40vw;
+    color: rgb(230, 230, 230);
+    font-family: 'Trebuchet MS';
+    font-size: 1.5rem;
+    transition-property: opacity;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-container-row{
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    padding-bottom: 0.5em;
+}
+/*---------------------------------------------------*/
+/*-----------------//  TRANSICIONES  //--------------*/
+/*---------------------------------------------------*/
+.scaled-modal-1{
+    transition-property: transform, opacity;
+    transition-duration: 1s;
+    opacity: 1;
+    transform: scale(2,1.7);
+}
+
+.scaled-modal-2{
+    transition-property: transform, opacity;
+    transition-duration: 1s;
+    opacity: 1;
+    transform: scale(0.7,1.5);
+}
+
+.scaled-remove{
+    transition-property: transform, opacity;
+    transition-duration: 1s;
+    opacity: 1;
+    transform: scale(1,1);
+}
+
+.display-none{
+    display: none;
+}
+.opacidad-none{
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    opacity: 0;
+}
+.opacidad-hidden{
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    opacity: 1;
+}
+
+.visibilidad-none{
+    visibility: hidden;
+}
+
+/*---------------------------------------------------*/
+/*----------------//  CURRICULUM  //-----------------*/
+/*---------------------------------------------------*/
+
+.perfil{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+    margin-right: 0.5em;
+    padding: 0px;
+}
+.perfil-completo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 1em;
+    width: 90%;
+    height: 35%;
+    background-color: rgba(226, 164, 164, 0.2);
+    border-radius: 1em;
+}
+.img-perfil{
+    margin: 0.8em;
+    padding: 0;
+    width: 10vw;
+    height: 10vw;
+}
+.perfil-nombre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+h3{
+    width: 100%;
+    font-family: 'Trebuchet MS';
+    font-size: 2rem;
+    color: rgb(230,230,230);
+}
+.btn-volver{
+    background-color: rgb(180, 255, 0);
+    width: 5em;
+    height: 3vw;
+    border: none;
+    border-radius: 0.7rem;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: large;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    color: rgb(30, 30, 30);
+}
+.btn-volver:hover{
+    background-color: rgb(150, 205, 0);
+    color: rgb(0, 0, 0);
+}
+h4{
+    height: 1rem;
+    padding: 0.6em 0;
+    font-family:'helvetica';
+    font-weight: 100;
+    font-size: 1.2rem;
+    color: rgb(180, 255, 0);
+}
+h5{
+    height: 1rem;
+    padding: 0.6em 0;
+    font-size: 1rem;
+    color: rgb(180, 255, 0);
+}
+.perfil-linkedin{
+    height: 1.5em;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.perfil-title{
+    text-decoration: none;
+    font-size:0.8em;
+    color: rgb(230,230,230);
+}
+
+.perfil-descripcion{
+    padding: 1em 0;
+    font-family:'helvetica';
+    font-size:0.6em;
+    color: rgb(230,230,230);
+}
+
+.perfil-experiencia{
+    z-index: 1;
+    height: 100%;
+    width: 50%;
+    border-left: 3px solid rgb(230, 230, 230);
+}
+
+.experiencia-descripcion{
+    font-family:'helvetica';
+    padding-left: 1em;
+    font-size:0.6em;
+    color: rgb(230,230,230);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/*---------------------------------------------------*/
+/*------------// FORMULARIO DE CONTACTO //-----------*/
+/*---------------------------------------------------*/
+.box-contacto{
+    width: 25vw;
+    height: 60vw;
+}
+.contacto-container{
+    display: flex;
+    gap:1.5em;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family:'trebuchet MS';
+}
+.input-name{
+    width: 80%;
+    outline: none;
+    background: none;
+    padding:0.5em ;
+    border: none;
+    border-bottom: 1px solid rgb(143, 129, 0);
+    color: rgb(230, 230, 230);
+}
+.input-name:focus{
+    border-bottom: 1px solid rgb(180, 255, 0);
+    background-color: rgba(129, 129, 129, 0.1);
+}
+.input-mensaje{
+    width: 80%;
+    height: 15vw;
+    outline: none;
+    padding:0.5em ;
+    background: none;
+    border: none;
+    border: 1px solid rgb(143, 129, 0);
+   
+    color: rgb(230, 230, 230);
+}
+.input-mensaje:focus{
+    border: 1px solid rgb(180, 255, 0);
+    background-color: rgba(129, 129, 129, 0.1);
+}
+.enviar{
+    width: 80%;
+    font-family: 'trebuchet';
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+/*---------------------------------------------------*/
